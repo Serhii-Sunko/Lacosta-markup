@@ -1,0 +1,117 @@
+.pre-footer {
+  padding: 30px 0px;
+
+  @media screen and (min-width: 768px) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: 1366px) {
+    padding: 52px 0;
+  }
+
+  &__contacts {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 1365px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    @media screen and (max-width: 767px) {
+      display: block;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin-right: 290px;
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 29px;
+
+    @media screen and (min-width: 768px) {
+      width: 128px;
+      height: 45px;
+    }
+  }
+
+  &__tel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include font(600, 14px, 17px, 0.08em);
+
+    color: var(--main-color);
+
+    @media screen and (max-width: 767px) {
+      margin-top: 21.88px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: 48px;
+
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 1366px) {
+      @include font(600, 30px, 37px, 0.08em);
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      display: block;
+      right: -24px;
+
+      width: 1px;
+      height: 40px;
+
+      background-color: var(--second-text);
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &-icon {
+      margin-right: 10px;
+
+      @media screen and (max-width: 768px) {
+        width: 24px;
+        height: 23px;
+      }
+
+      @media screen and (max-width: 1366px) {
+        width: 30px;
+        height: 29px;
+      }
+    }
+  }
+
+  &__inst {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/background-icons/instagram.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 767px) {
+      margin: 30px auto 0;
+    }
+  }
+}

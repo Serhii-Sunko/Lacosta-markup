@@ -1,0 +1,88 @@
+.hero {
+    padding: 50px 0 73px;
+    background-image: url("../images/background-icons/hero-wave.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom -26px left -64px;
+
+    @media screen and (min-width:1366px) {
+        padding: 46px 0 107px;
+    }
+
+    @media screen and (min-width:768px) {
+        background-size: cover;
+        background-position: bottom -10px left 0;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    @media screen and (min-width:1366px) {
+        &__container {
+            align-items: start;
+        }
+    }
+
+    &__title {
+        @include font(800, 20px, 130%, 0.03em);
+        color: var(--main-text);
+
+    }
+
+    @media screen and (min-width:768px) {
+        &__title{
+            font-size: 26px;
+        }
+    }
+
+    @media screen and (min-width:1366px) {
+        &__title{
+            font-size: 58px;
+        }
+    }
+    
+    &__text {
+        margin-top: 8px;
+        @include font(700, 14px, 157%, 0.08em);
+        color: var(--main-text);
+
+        &--secondary {
+            font-weight: 500;
+            color: var(--second-text);
+        }
+
+        &--accent {
+            color: var(--accent-color);
+        }
+    }
+
+    @media screen and (min-width:1366px) {
+        &__text{
+            font-size: 20px;
+        }
+    }
+
+    &__button {
+        margin: 52px auto 0;
+    }
+
+    @media screen and (min-width:768px) {
+        &__button {
+            margin-left: 0;
+        }
+    }
+
+    &__image {
+        display: block;
+        margin: 55px auto 0;
+    }
+
+    @media screen and (min-width:768px) {
+        &__image {
+            margin: 0;
+        }
+    }
+}

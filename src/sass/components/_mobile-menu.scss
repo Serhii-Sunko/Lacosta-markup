@@ -1,0 +1,79 @@
+.mobile-menu {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--mobile-menu-bg);
+    transform: translate(100%);
+    @include animation(transform);
+
+    &.is-open {
+        transform: translate(0);
+    }
+    
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px auto 0;
+    }
+
+    &__logo {
+        display: block;
+    }
+
+    &__logo-icon{
+        width: 80px;
+        height: 29.14px;
+
+        @media screen and (min-width:768px) {
+            width: 128px;
+            height: 45px;
+        }
+    }
+
+    &__close-menu {
+        background-color: inherit;
+        display: block;
+    }
+
+    &__links {
+        margin: 49.39px auto 0;
+
+        max-width: 260px;
+
+        @media screen and (min-width:768px) {
+            max-width: 332px;
+        }
+    }
+
+    &__item {
+        @include font(800, 20px, 180%, 0.03em);
+
+        @media screen and (min-width:768px) {
+            font-size: 26px;
+        }
+    }
+    
+    &__link {
+        color: var(--white);
+        @include animation(color);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--accent-color);
+    }
+
+    &__button {
+        display: block;
+        margin: 50px auto 0;
+        background-color: inherit;
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+    }
+}

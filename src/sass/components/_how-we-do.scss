@@ -1,0 +1,139 @@
+.how-we-do {
+    padding-top: 0;
+    padding-bottom: 50px;
+    background-color: var(--white);
+
+    &__title {
+        @include font(800, 20px, 130%, 0.03em);
+        color: var(--main-text);
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    @media screen and(min-width: 768px) {
+        &__title {
+            font-size: 26px;
+        }
+    }
+
+    @media screen and(min-width: 1366px) {
+        &__title {
+            font-size: 46px;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+    }
+
+    &__list {
+        --gap: 20px;
+    }
+
+    &__item {
+        background-color: var(--white);
+        @extend %cards-shadow;
+        padding: 30px 11px 24px;
+        @include animation(background-color);
+    }
+
+    &__item:hover, &__item:focus {
+        background-color: var(--accent-color);
+    }
+
+    @media screen and(min-width: 768px) {
+        &__item {
+            --item-amount: 2;
+            padding: 40px 22px;
+        }
+    }
+    @media screen and(min-width: 1366px) {
+        &__item {
+            --item-amount: 3;
+            padding: 40px 30px 55px;
+        }
+        }
+
+    &__icon {
+        display: block;
+        height: 48px;
+        fill: var(--accent-color);
+        @include animation(fill);
+        margin: 0 auto 20px;
+    }
+
+    &__item:hover &__icon {
+        fill: var(--white);
+    }
+
+
+    &__subtitle {
+        @include font(700, 14px, 140%, 0.08em);
+        color: var(--main-text);
+        text-align: center;
+        margin-bottom: 22px;
+        @include animation(color);
+    }
+
+    &__item:hover &__subtitle,
+    &__item:focus &__subtitle {
+        color: var(--white)
+    }
+
+    @media screen and(min-width: 768px) {
+        &__subtitle {
+            margin-bottom: 27px;
+        }
+    }
+
+    @media screen and(min-width: 1366px) {
+        &__subtitle {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__description {
+        @include font(500, 12px, 1.67, 0.08em);
+        color: var(--second-text);
+        text-align: center;
+        @include animation(color);
+    }
+
+    @media screen and (min-width: 1366px) {
+        &__description {
+            font-size: 18px;
+        }
+    }
+
+    &__item:hover &__description,
+    &__item:focus &__description {
+        color: var(--white);
+    }
+
+    &__description::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin: 0 auto;
+        background-color: var(--accent-color);
+        margin-bottom: 20px;
+        @include animation(background-color);
+    }
+
+    &__item:hover &__description::before,
+    &__item:focus &__description::before {
+        background-color: var(--white);
+    }
+
+    @media screen and(min-width: 768px) {
+        &__description::before {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media screen and(min-width: 1366px) {
+        &__description::before {
+            margin-bottom: 16px;
+        }
+    }
+}
