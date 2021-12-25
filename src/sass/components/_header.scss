@@ -1,92 +1,72 @@
 .page-header {
-    margin-top: 30.5px;
+  margin-top: 0;
+  background-color: var(--header-bgc);
 
-    @media screen and (min-width:768px) {
-        margin-top: 40px;
-    }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    @media screen and (min-width: 1366px) {
-        margin-top: 33.5px;
-    }
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
 
-    &__nav {
-       display: flex;
-       justify-content: space-between;
-    } 
+  &__logo-icon {
+    width: 157px;
+    height: 39px;
+  }
 
-    &__logo {
-        display: flex;
-        align-items: center;
-    }
+  // @media screen and (min-width: 768px) {
+  //   &__logo-icon {
+  //     width: 128px;
+  //     height: 45px;
+  //   }
+  // }
 
-    &__logo-icon {
-        width: 80px;
-        height: 29.14px;
-    }
+  &__links {
+    display: none;
+  }
 
-    @media screen and (min-width:768px) {
-        &__logo-icon {
-            width: 128px;
-            height: 45px;
-        }
-    }
-
+  @media screen and (min-width: 1024px) {
     &__links {
-        display: none;
+      display: flex;
+      align-items: center;
     }
+  }
 
-    @media screen and (min-width: 1366px) {
-        &__links {
-            display: flex;
-            align-items: center;
-            margin-right: 60px;
-        }
-    }
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
 
-    &__item:not(:last-child) {
-        margin-right: 40px;
-    }
+  &__link {
+    display: block;
+    padding: 28px 0;
 
-    &__link {
-        @include font(700, 14px, 17px);
-        text-transform: uppercase;
-        color: var(--second-text);
-        @include animation(color);
-    }
+    @include font(500, 16px, 24px, 0.04em);
+    text-transform: uppercase;
+    color: var(--second-text);
+    @include animation(color);
+  }
 
-    &__link:hover,
-    &__link:focus {
-        color: var(--accent-color);
-    }
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
 
-    &__wrapper {
-        display: flex;
-    }
+  &__wrapper {
+    display: flex;
+  }
 
-    &__button {
-        display: none;
-    }
+  &__mobile-menu {
+    display: block;
+    border: none;
+    background-color: var(--header-bgc);
+  }
 
-    @media screen and (min-width:768px) {
-        &__button {
-            display: block;
-            margin-right: 40px;
-        }
-    }
-
-    @media screen and (min-width:1366px) {
-        &__button {
-            margin-right: 0;
-        }
-    }
-
+  @media screen and (min-width: 1024px) {
     &__mobile-menu {
-        display: block;
+      display: none;
     }
-
-    @media screen and (min-width:1366px) {
-        &__mobile-menu {
-            display: none;
-        }
-    }
+  }
 }

@@ -1,12 +1,9 @@
 :root {
   --main-text: #000000;
   --second-text: #292929;
-  --accent-color: ##095b32;
+  --accent-color: #095b32;
   --white: #ffffff;
   --header-bgc: #e5e5e5;
-  // --problems-icon: #3d3d3d;
-  // --guarantee-bg: #f1f1f1;
-  // --vk-fill: #436eab;
   --mobile-menu-bg: rgb(17, 21, 24, 0.9);
 
   --gap: 30px;
@@ -14,5 +11,5 @@
 
   --mobile: 480px;
   --tablet: 768px;
-  --desktop: 1366px;
+  --desktop: 1024px;
 }
