@@ -2,6 +2,10 @@
   margin-top: 0;
   background-color: var(--header-bgc);
 
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -17,18 +21,26 @@
     height: 39px;
   }
 
-  // @media screen and (min-width: 768px) {
-  //   &__logo-icon {
-  //     width: 128px;
-  //     height: 45px;
-  //   }
-  // }
+  @media screen and (min-width: 768px) {
+    &__container {
+      padding-top: 40px;
+      padding-bottom: 28px;
+    }
+    // &__logo-icon {
+    //   width: 128px;
+    //   height: 45px;
+    // }
+  }
 
   &__links {
     display: none;
   }
 
   @media screen and (min-width: 1024px) {
+    &__container {
+      padding-top: 12;
+      padding-bottom: 0;
+    }
     &__links {
       display: flex;
       align-items: center;

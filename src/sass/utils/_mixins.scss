@@ -50,6 +50,10 @@
 @mixin animation($property) {
   transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@mixin animation2($property, $property2) {
+  transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $property2 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 @mixin font($weight: 500, $size: 16px, $height: 24px, $spacing: 0.04em) {
   font-family: 'Oswald', sans-serif;

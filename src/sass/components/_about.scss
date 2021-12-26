@@ -1,0 +1,113 @@
+body {
+  background-color: var(--header-bgc);
+}
+.about {
+  padding-bottom: 0px;
+  padding-top: 0;
+
+  &__container {
+    padding-top: 43px;
+    padding-bottom: 42px;
+    padding-left: 49px;
+    background-color: #ffffff;
+  }
+  &____cont-for-thump {
+    width: 481px;
+    padding-bottom: 0;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__cont-about-wrapper {
+    display: flex;
+  }
+
+  &__desc {
+    @include font(200, 19px, 34px, 0.02em);
+    color: var(--second-text);
+    margin-bottom: 24px;
+  }
+
+  &__start-searching-link {
+    display: block;
+    max-width: 167px;
+
+    background: var(--accent-color);
+    color: var(--white);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    @include font(500, 16px, 34px, 0.02em);
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    padding: 15px 32px;
+    margin-bottom: 23px;
+  }
+
+  &__title {
+    @include font(400, 28px, 41px);
+    color: var(--main-text);
+    margin-bottom: 23px;
+  }
+  &__item {
+    color: var(--accent-color);
+  }
+  &__cont-about-wrapper > &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+  }
+  &__space-desktop {
+    display: none;
+  }
+  &__image {
+    width: 481px;
+    height: 412px;
+    object-fit: fill;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__image {
+      width: 481px;
+      height: 412px;
+      object-fit: fill;
+    }
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__cont-about-wrapper {
+      display: flex;
+    }
+    &__space-desktop {
+      display: none;
+    }
+    &__start-searching-link {
+      margin-bottom: 23px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__image {
+      width: 481px;
+      height: 412px;
+      object-fit: fill;
+    }
+    &__space-desktop {
+      display: block;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__start-searching-link {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 %buttons {
-  @include font(500, 16px, 24px, 0.04em);
+  @include font(500, 16px, 34px, 0.02em);
   text-align: center;
   text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
-    @include font(500, 16px, 24px, 0.04em);
+    @include font(500, 16px, 34px, 0.02em);
   }
 }
