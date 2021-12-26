@@ -6,12 +6,11 @@ body {
   padding-top: 0;
 
   &__container {
-    padding-top: 43px;
-    padding-bottom: 42px;
-    padding-left: 49px;
-    background-color: #ffffff;
+    background-color: var(--header-bgc);
   }
   &____cont-for-thump {
+    padding-top: 43px;
+    padding-bottom: 42px;
     width: 481px;
     padding-bottom: 0;
   }
@@ -19,6 +18,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    padding-left: 49px;
+    background-color: var(--white);
   }
   &__cont-about-wrapper {
     display: flex;
@@ -50,6 +52,7 @@ body {
   &__title {
     @include font(400, 28px, 41px);
     color: var(--main-text);
+    margin-top: 42px;
     margin-bottom: 23px;
   }
   &__item {
