@@ -30,6 +30,7 @@ body {
     @include font(200, 19px, 34px, 0.02em);
     color: var(--second-text);
     margin-bottom: 24px;
+    margin-right: 5px;
   }
 
   &__start-searching-link {
@@ -54,6 +55,7 @@ body {
     color: var(--main-text);
     margin-top: 42px;
     margin-bottom: 23px;
+    margin-right: 5px;
   }
   &__item {
     color: var(--accent-color);
@@ -96,6 +98,12 @@ body {
   }
 
   @media screen and (min-width: 1024px) {
+    &__title {
+      margin-right: 0;
+    }
+    &__desc {
+      margin-right: 0;
+    }
     &__image {
       width: 481px;
       height: 412px;
